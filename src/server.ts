@@ -1,7 +1,7 @@
-import {sequelize, config} from "./config/config";
+import {sequelize, config} from "./Config/config";
 import http from "http";
 import app from "./app"
-import gracefulShutdown from "./utils/shutdown";
+import gracefulShutdown from "./Shared/utils/shutdown";
 
 let server: http.Server;
 
