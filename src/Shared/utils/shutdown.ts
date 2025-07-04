@@ -1,7 +1,7 @@
 import http from "http";
-import {Sequelize} from "sequelize";
+import {Connection} from "mysql2/promise";
 
-async function gracefulShutdown(server: http.Server, sequelize: Sequelize, reason: string, exitCode: number = 1) {
+async function gracefulShutdown(server: http.Server, connection: Connection, reason: string, exitCode: number = 1) {
     console.log(`\n🛑 Shutting down: ${reason}`);
 
     if (server) {
@@ -16,7 +16,7 @@ async function gracefulShutdown(server: http.Server, sequelize: Sequelize, reaso
 
     try {
         console.log("⏳ Closing database connection...");
-        await sequelize.close();
+        await connection.end();
         console.log("✅ Database connection closed.");
     } catch (err) {
         console.error("❌ Error closing DB:", err);
