@@ -1,4 +1,4 @@
-export interface MessageAttributes {
+export interface MessageInterface {
   id?: number;
   message: string;
   userId: number | string;
