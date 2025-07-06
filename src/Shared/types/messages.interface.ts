@@ -1,8 +1,8 @@
 export interface MessageInterface {
-	id?: number;
+	id?: number | undefined;
 	message: string;
-	sender_id: number | string;
-	receiver_id: number | string | null;
+	sender_id: string;
+	receiver_id: string;
 	created_at?: Date;
-	updated_at?: Date;
+	updated_at?: Date | null;
 }

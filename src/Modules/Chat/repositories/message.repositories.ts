@@ -1,7 +1,8 @@
 import DB from "../../../server";
-import { MessageType, messageTable } from "../schema/message.schema";
+import { MessageInterface } from "../../../Shared/types/messages.interface";
+import { messageTable } from "../schema/message.schema";
 
-const CreateMessageRepository = async ({ message, sender_id, receiver_id }: MessageType) => {
+export const createMessageRepository = async ({ message, sender_id, receiver_id }: MessageInterface) => {
 	try {
 		const result = await DB?.insert(messageTable)
 			.values({
@@ -16,4 +17,9 @@ const CreateMessageRepository = async ({ message, sender_id, receiver_id }: Mess
 		console.error("Error inserting message:", error);
 		throw error;
 	}
+};
+
+
+export const getAllMessagesRepository = async (): Promise<MessageInterface[]> => {
+	return await DB?.select().from(messageTable) || [];
 };
