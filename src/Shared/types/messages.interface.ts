@@ -1,8 +1,8 @@
 export interface MessageInterface {
-  id?: number;
-  message: string;
-  userId: number | string;
-  receiverId: number | string | null;
-  createdAt?: Date;
-  updatedAt?: Date;
+	id?: number;
+	message: string;
+	sender_id: number | string;
+	receiver_id: number | string | null;
+	created_at?: Date;
+	updated_at?: Date;
 }
