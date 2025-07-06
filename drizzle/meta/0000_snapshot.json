@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "mysql",
-  "id": "c99cb665-2b5e-404d-9d26-9c66fec5e586",
+  "id": "85c21a80-8989-4996-9825-4f1821bec4f9",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "message": {
@@ -47,7 +47,7 @@
           "name": "updated_at",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false,
           "onUpdate": true,
           "default": "CURRENT_TIMESTAMP"

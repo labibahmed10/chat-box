@@ -1,28 +1,17 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "lib": [
-      "es2021",
-      "esnext",
-      "dom"
-    ],
-    "moduleDetection": "auto",
-    "types": [
-      "node"
-    ]
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    ".env"
-  ]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"strict": true,
+		"lib": ["es2021", "esnext", "dom"],
+		"moduleDetection": "auto",
+		"types": ["node"]
+	},
+	"include": ["./src/**/*"],
+	"exclude": ["node_modules", ".env", ".env.keys"]
 }
