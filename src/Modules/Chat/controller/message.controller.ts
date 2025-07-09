@@ -14,11 +14,15 @@ export const handleSendMessage = async (req: Request, res: Response): Promise<vo
 	}
 };
 
-export const handleGetMessages = async (_req: Request, res: Response): Promise<void> => {
+export const handleGetMessages = async (req: Request, res: Response): Promise<void> => {
 	try {
 		const messages = await getMessages();
-		res.status(200).json(messages);
+		res
+		.status(200)
+		.json(messages);
 	} catch (err: any) {
-		res.status(500).json({ error: err.message });
+		res
+		.status(500)
+		.json({ error: err.message });
 	}
 };

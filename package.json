@@ -1,32 +1,32 @@
 {
-	"name": "chat-box",
-	"version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"clean": "rm -rf dist",
-		"start": "dotenvx run -f .env.local -- node dist/index.js",
-		"start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-		"dev": "dotenvx run -f .env.local -- ts-node-dev --respawn --transpile-only src/server.ts",
-		"build": "pnpm run clean && tsc"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": "",
-	"dependencies": {
-		"@dotenvx/dotenvx": "^1.45.2",
-		"cors": "^2.8.5",
-		"drizzle-orm": "^0.44.2",
-		"express": "^5.1.0",
-		"mysql2": "^3.14.1",
-		"socket.io": "^4.8.1"
-	},
-	"devDependencies": {
-		"@types/cors": "^2.8.19",
-		"@types/express": "^5.0.3",
-		"@types/node": "^24.0.10",
-		"drizzle-kit": "^0.31.4",
-		"ts-node-dev": "^2.0.0",
-		"typescript": "^5.8.3"
-	}
+  "name": "chat-box",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "dotenvx run -f .env.local -- node dist/index.js",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "dev": "dotenvx run -f .env.local -- ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "pnpm run clean && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.45.2",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.44.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "drizzle-kit": "^0.31.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
 }
